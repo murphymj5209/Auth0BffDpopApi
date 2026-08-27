@@ -1,10 +1,10 @@
-﻿using BffAuth0.Server.Models;
+using BffAuth0.Server.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 using System.Security.Claims;
 
-namespace BlazorBffOpenIDConnect.Server.Controllers;
+namespace BffAuth0.Server.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]

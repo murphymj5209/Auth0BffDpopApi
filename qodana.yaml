@@ -1,0 +1,10 @@
+version: "1.0"
+linter: jetbrains/qodana-dotnet:latest
+
+# Exclude inspection rules for unused code, variables, and parameters
+exclude:
+  - name: UnusedVariable
+  - name: UnusedLocalVariable
+  - name: UnusedMember.Global
+  - name: UnusedMember.Local
+  - name: UnusedParameter.Global
