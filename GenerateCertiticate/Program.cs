@@ -1,4 +1,4 @@
-﻿using CertificateManager;
+using CertificateManager;
 using CertificateManager.Models;
 using Microsoft.Extensions.DependencyInjection;
 using System.Security.Cryptography;
@@ -17,8 +17,8 @@ class Program
            .AddCertificateManager()
            .BuildServiceProvider();
 
-        _cc = sp.GetService<CreateCertificates>();
-        _iec = sp.GetService<ImportExportCertificate>();
+        _cc = sp.GetRequiredService<CreateCertificates>();
+        _iec = sp.GetRequiredService<ImportExportCertificate>();
 
         var rsaCert = CreateRsaCertificate("localhost", 10);
         var ecdsaCert = CreateECDsaCertificate("localhost", 10);
