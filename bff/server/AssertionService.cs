@@ -15,8 +15,8 @@ public static class AssertionService
         var authority = configuration.GetValue<string>("Auth0:Authority");
 
         // Dev only!
-        var oidcClientPrivatePem = File.ReadAllText(Path.Combine("", "rsa256-oidc-private.pem"));
-        var oidcClientPublicPem = File.ReadAllText(Path.Combine("", "rsa256-oidc-public.pem"));
+        var oidcClientPrivatePem = File.ReadAllText(Path.Combine("", "rsa256-private.pem"));
+        var oidcClientPublicPem = File.ReadAllText(Path.Combine("", "rsa256-public.pem"));
 
         // Deployments, Aspire setup
         //var oidcClientPrivatePem = builder.Configuration.GetValue<string>("OidcClientPrivatePem");
