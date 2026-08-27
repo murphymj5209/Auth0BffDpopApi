@@ -3,9 +3,9 @@ name: Qodana Code Quality Scan
 on:
   workflow_dispatch:
   push:
-    branches: ["main", "dev"]
+    branches: ["main", "dev", "test", "qa", "prod"]
   pull_request:
-    branches: ["main", "dev"]
+    branches: ["main", "dev", "test", "qa", "prod"]
 
 jobs:
   qodana:
