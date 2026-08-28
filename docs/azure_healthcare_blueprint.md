@@ -695,11 +695,11 @@ STAGE 1: DEV                STAGE 2: TEST              STAGE 3: QA              
 
 The local development environment runs on the developer's PC using **.NET Aspire** to orchestrate lightweight containers.
 
-* [ ] **Step 1 (Workstation Prerequisite Setup)**: Install .NET 10 SDK, Docker Desktop (or Podman), Flutter SDK, Microsoft Playwright CLI (`playwright install`), and IDE (Visual Studio / JetBrains Rider with JetBrains Qodana plugin).
-* [ ] **Step 2 (Entra Dev Tenant Registration)**: Create a free Microsoft Entra Developer Tenant and register `Mortho-Local-BFF` with redirect URI `https://localhost:7001/signin-oidc`.
-* [ ] **Step 3 (Local Container Orchestration via .NET Aspire)**: Launch `.NET Aspire` (`AppAspireHost`) to spin up local SQL Server 2022, Redis (permission cache), and Azurite (Blob Storage emulator) containers.
-* [ ] **Step 4 (Local Cryptographic DPoP Keys Generation)**: Run local certificate generator (`GenerateCertificate` project) to generate local DPoP testing keys (`ecdsa256-private.pem` & `ecdsa256-public.pem`).
-* [ ] **Step 5 (Configure .NET User-Secrets)**: Configure local `.NET user-secrets` for Entra `ClientId`, `TenantId`, and DPoP key paths so zero secrets exist in git.
+* [x] **Step 1 (Workstation Prerequisite Setup)**: Install .NET 10 SDK, Docker Desktop (or Podman), and IDE with JetBrains Qodana. *(Completed)*
+* [ ] **Step 2 (Entra Dev Tenant Registration)**: Register DEV API `dpop-api-d` (scope `api://dpop-api-d/access_as_user`) and DEV BFF `dpop-bff-d` with redirect URI `https://localhost:7001/signin-oidc` (strictly adhering to the `dpop-...-[d|t|q|p]` naming rule).
+* [x] **Step 3 (Local Container Orchestration via .NET Aspire)**: Launch `.NET Aspire` (`AppAspireHost`) to spin up local SQL Server 2022, Redis, and Azurite containers. *(Completed)*
+* [x] **Step 4 (Local Cryptographic DPoP Keys Generation)**: Run local certificate generator (`GenerateCertificate` project) to generate local DPoP testing keys. *(Completed)*
+* [ ] **Step 5 (Configure .NET User-Secrets)**: Configure local `.NET user-secrets` for `dpop-bff-d` (`AzureAd:ClientId`, `AzureAd:TenantId`, and DPoP key paths) so zero secrets exist in git.
 * [ ] **Step 6 (EF Core 10 Database Migration)**: Create and apply initial EF Core migration for the **7 clean domain tables** (`Tenants`, `Organizations`, `Users`, `DoctorPatientAssignments`, `CareTeamMembers`, `DoctorCoverage`, `Patients`).
 * [ ] **Step 7 (ASP.NET Core BFF Cookie Authentication Setup)**: Implement standard ASP.NET Core OpenIdConnect BFF handlers with `HttpOnly`, `SameSite=Strict`, `Secure` session cookies and server-side token storage.
 * [ ] **Step 8 (Microsoft Graph API Doctor Invitation Integration)**: Implement backend C# endpoint calling `GraphServiceClient.Invitations.PostAsync` for passwordless doctor email invitations.
