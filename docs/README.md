@@ -16,6 +16,23 @@
 - Upload the rsa public key to the Auth0 dashboard (Settings -> Advanced Settings -> Certificates)
 - NOTE: use user secrets to load the certificate in the BFF server project, do not push in repo.
 
+## Zero-Trust Clinical Architecture Documentation Suite
+
+A comprehensive architectural and engineering blueprint has been created for the **Mortho Zero-Trust Clinical Platform**:
+
+- [01-executive_summary.md](file:///e:/Github/Damienbod/Auth0BffDpopApi/docs/01-executive_summary.md): **Executive Vision, Architecture Mapping & ASP.NET Zero Replacement Rationale**
+- [02a-cloudflare_work_effort.md](file:///e:/Github/Damienbod/Auth0BffDpopApi/docs/02a-cloudflare_work_effort.md): **Cloudflare Edge, Cloudflare Tunnel (`cloudflared`), WAF, API Shield & Origin Cloaking**
+- [02b-google_cloud_work_effort.md](file:///e:/Github/Damienbod/Auth0BffDpopApi/docs/02b-google_cloud_work_effort.md): **GCE VM Deployment, Windows/SQL Image Setup, Cloud KMS TDE, GCS v4 Pre-signed URLs & IAP**
+- [02c-fusionauth_identity_work_effort.md](file:///e:/Github/Damienbod/Auth0BffDpopApi/docs/02c-fusionauth_identity_work_effort.md): **FusionAuth Identity Provider, DPoP Issuance, Passkeys/WebAuthn, Hospital SSO & Lambdas**
+- [02d-stream_chat_realtime_work_effort.md](file:///e:/Github/Damienbod/Auth0BffDpopApi/docs/02d-stream_chat_realtime_work_effort.md): **HIPAA Real-Time Communication, Care Team Messaging Channels & APNs/FCM Push Notifications**
+- [02e-database_storage_work_effort.md](file:///e:/Github/Damienbod/Auth0BffDpopApi/docs/02e-database_storage_work_effort.md): **SQL Server on NVMe, Shared Memory LPC Transport, Cloud KMS TDE, EF Core ReBAC & Audit Trails**
+- [03-application_coding_detailed.md](file:///e:/Github/Damienbod/Auth0BffDpopApi/docs/03-application_coding_detailed.md): **BFF YARP Pipelines, DPoP Handlers, Angular Syncfusion Workstations & Flutter Mobile Clients**
+- [04-pentest_compliance_verification.md](file:///e:/Github/Damienbod/Auth0BffDpopApi/docs/04-pentest_compliance_verification.md): **Pentest.com Audit Checklist across Web, Mobile, Desktop (Windows, Linux, macOS, iOS, Android)**
+- [05-implementservice.md](file:///e:/Github/Damienbod/Auth0BffDpopApi/docs/05-implementservice.md): **Service Implementation Roadmap & Phased Execution Plan (What to Build 1st, 2nd, etc.)**
+- [ClientRegistration&WorkFlows.md](file:///e:/Github/Damienbod/Auth0BffDpopApi/docs/ClientRegistration&WorkFlows.md): **Client Registration Specifications & Clinician Onboarding Workflows**
+
+---
+
 ## Blogs
 
 [Implement BFF using Auth0, Angular and ASP.NET Core](https://damienbod.com/2026/08/10/implement-bff-using-auth0-angular-and-asp-net-core/)
